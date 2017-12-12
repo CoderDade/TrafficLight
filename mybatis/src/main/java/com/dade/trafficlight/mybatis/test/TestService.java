@@ -1,4 +1,4 @@
-package com.dade.trafficlight.mybatis.annotation;
+package com.dade.trafficlight.mybatis.test;
 
 import org.springframework.stereotype.Service;
 

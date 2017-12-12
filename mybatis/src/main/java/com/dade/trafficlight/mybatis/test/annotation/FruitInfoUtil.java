@@ -1,4 +1,4 @@
-package com.dade.trafficlight.mybatis.test;
+package com.dade.trafficlight.mybatis.test.annotation;
 
 import java.lang.reflect.Field;
 

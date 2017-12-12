@@ -30,16 +30,14 @@ public class DebugProxy implements InvocationHandler {
     // 虽然调用原GreetImpl中的方法重要，但我想这里更看重的是通过自定义处理实现GreetImpl中没有的功能
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        Object result;
+        Object result = null;
         try {
             //自定義的處理
             System.out.println("--before method " + method.getName());
             //調用GreetImpl中方法
             result = method.invoke(obj, args);
-        }catch(InvocationTargetException e) {
-            throw e.getTargetException();
         }catch(Exception e) {
-            throw new RuntimeException("unexpected invocation exception: " + e.getMessage());
+            e.printStackTrace();
         }finally {
             System.out.println("--after method " + method.getName());
         }

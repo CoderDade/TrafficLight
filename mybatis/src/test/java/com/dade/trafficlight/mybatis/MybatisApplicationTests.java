@@ -1,10 +1,13 @@
 package com.dade.trafficlight.mybatis;
 
 import com.dade.trafficlight.mybatis.test.*;
+import com.dade.trafficlight.mybatis.test.annotation.Apple;
+import com.dade.trafficlight.mybatis.test.annotation.FruitInfoUtil;
 import com.dade.trafficlight.mybatis.test.proxy.DebugProxy;
 import com.dade.trafficlight.mybatis.test.proxy.Greet;
 import com.dade.trafficlight.mybatis.test.proxy.GreetImpl;
 import com.dade.trafficlight.mybatis.test.proxy.SimpleProxy;
+import org.apache.ibatis.annotations.Mapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +35,11 @@ public class MybatisApplicationTests {
 	@Test
 	public void testAnnotation(){
 		FruitInfoUtil.getFruitInfo(Apple.class);
+	}
+
+	@Test
+	public void testAnnotationMapper(){
+		MapperUtil.getMapperInfo(TLUserDao.class);
 	}
 
 	@Autowired

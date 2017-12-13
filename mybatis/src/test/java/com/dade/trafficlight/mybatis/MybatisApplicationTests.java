@@ -38,7 +38,7 @@ public class MybatisApplicationTests {
 	}
 
 	@Test
-	public void testAnnotationMapper(){
+	public void testAnnotationMapper() throws NoSuchFieldException, IllegalAccessException {
 		MapperUtil.getMapperInfo(TLUserDao.class);
 	}
 

@@ -1,6 +1,8 @@
 package com.dade.trafficlight.mybatis.test.annotation;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
 
 public class FruitInfoUtil {
     public static void getFruitInfo(Class<?> clazz){
@@ -14,6 +16,10 @@ public class FruitInfoUtil {
         for(Field field :fields){
             if(field.isAnnotationPresent(FruitName.class)){
                 FruitName fruitName = (FruitName) field.getAnnotation(FruitName.class);
+//                fruitName.
+                InvocationHandler h = Proxy.getInvocationHandler(fruitName);
+//                Proxy p = (Proxy) fruitName;
+//                InvocationHandler ih = p.h;
                 strFruitName=strFruitName+fruitName.value();
                 System.out.println(strFruitName);
             }

@@ -7,7 +7,6 @@ import com.dade.trafficlight.mybatis.test.proxy.DebugProxy;
 import com.dade.trafficlight.mybatis.test.proxy.Greet;
 import com.dade.trafficlight.mybatis.test.proxy.GreetImpl;
 import com.dade.trafficlight.mybatis.test.proxy.SimpleProxy;
-import org.apache.ibatis.annotations.Mapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,19 +36,19 @@ public class MybatisApplicationTests {
 		FruitInfoUtil.getFruitInfo(Apple.class);
 	}
 
-	@Test
-	public void testAnnotationMapper() throws NoSuchFieldException, IllegalAccessException {
-		MapperUtil.getMapperInfo(TLUserDao.class);
-	}
+//	@Test
+//	public void testAnnotationMapper() throws NoSuchFieldException, IllegalAccessException {
+//		MapperUtil.getMapperInfo(TLUserDao.class);
+//	}
 
-	@Autowired
-	TLUserDao tlUserDao;
+//	@Autowired
+//	TLUserDao tlUserDao;
 
-	@Test
-	public void testMybatis(){
-		List<TLUserEntity> tlusers = tlUserDao.queryTLUser();
-		tlusers.forEach(System.out::println);
-	}
+//	@Test
+//	public void testMybatis(){
+//		List<TLUserEntity> tlusers = tlUserDao.queryTLUser();
+//		tlusers.forEach(System.out::println);
+//	}
 
 	@Autowired
     SimpleProxy simpleProxy;

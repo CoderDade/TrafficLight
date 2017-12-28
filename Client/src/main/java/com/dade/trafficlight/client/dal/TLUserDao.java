@@ -1,4 +1,4 @@
-package com.dade.trafficlight.mybatis.test;
+package com.dade.trafficlight.client.dal;
 
 import com.dade.trafficlight.mybatis.annotation.MybatisTL;
 import org.apache.ibatis.annotations.Mapper;

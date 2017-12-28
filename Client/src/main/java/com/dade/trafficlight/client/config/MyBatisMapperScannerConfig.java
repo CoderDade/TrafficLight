@@ -1,4 +1,4 @@
-package com.dade.trafficlight.mybatis.config;
+package com.dade.trafficlight.client.config;
 
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;

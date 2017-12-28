@@ -1,4 +1,4 @@
-package com.dade.trafficlight.mybatis.test;
+package com.dade.trafficlight.client.dal;
 
 import lombok.Data;
 

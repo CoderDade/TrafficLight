@@ -1,4 +1,4 @@
-package com.dade.trafficlight.mybatis.config;
+package com.dade.trafficlight.client.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;

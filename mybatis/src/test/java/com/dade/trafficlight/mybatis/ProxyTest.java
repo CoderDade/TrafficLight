@@ -1,9 +1,5 @@
 package com.dade.trafficlight.mybatis;
 
-import com.dade.trafficlight.mybatis.test.MapperUtil;
-import com.dade.trafficlight.mybatis.test.TLUserDao;
-import com.dade.trafficlight.mybatis.test.TLUserEntity;
-import com.dade.trafficlight.mybatis.util.AnnotationUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,21 +39,20 @@ public class ProxyTest {
         System.out.println(sb);
     }
 
-    @Autowired
-    TLUserDao tlUserDao;
+//    @Autowired
+//    TLUserDao tlUserDao;
 
-    @Test
-    public void testTL() throws NoSuchFieldException, IllegalAccessException {
+//    @Test
+//    public void testTL() throws NoSuchFieldException, IllegalAccessException {
 //        AnnotationUtil.limit();
 //        System.out.println("============");
 //        AnnotationUtil.checkAnnotation();
 //        System.out.println("============");
-        List<TLUserEntity> tlUserEntities = tlUserDao.queryTLUser();
-        tlUserEntities.forEach(System.out::println);
+//        List<TLUserEntity> tlUserEntities = tlUserDao.queryTLUser();
+//        tlUserEntities.forEach(System.out::println);
 //        String sql = "<script>select user_name userName, user_age userAge from tl_user</script>";
 //        System.out.println(AnnotationUtil.limit1ForTest(sql));
 //        MapperUtil.getMapperInfo(TLUserDao.class);
-    }
-
+//    }
 
 }

@@ -55,5 +55,4 @@ public class ProxyTest {
 //        MapperUtil.getMapperInfo(TLUserDao.class);
 //    }
 
-
 }

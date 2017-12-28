@@ -74,4 +74,10 @@ public class MybatisApplicationTests {
 
     }
 
+    @Test
+	public void testRun(){
+		System.out.println("Hello Java Application!");
+	}
+
+
 }

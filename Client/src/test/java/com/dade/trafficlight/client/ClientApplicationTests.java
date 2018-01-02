@@ -2,6 +2,8 @@ package com.dade.trafficlight.client;
 
 import com.dade.trafficlight.client.dal.TLUserDao;
 import com.dade.trafficlight.client.dal.TLUserEntity;
+import com.dade.trafficlight.mybatis.annotation.MybatisTL;
+import com.dade.trafficlight.mybatis.util.AnnotationUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +24,8 @@ public class ClientApplicationTests {
 	TLUserDao tlUserDao;
 
 	@Test
-	public void testRun(){
+	public void testRun() throws NoSuchFieldException, IllegalAccessException {
+        AnnotationUtil.limit(TLUserDao.class);
 		List<TLUserEntity> tlUsers = tlUserDao.queryTLUser();
 		tlUsers.forEach(System.out::println);
 	}

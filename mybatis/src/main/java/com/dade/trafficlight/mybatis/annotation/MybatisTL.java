@@ -9,5 +9,6 @@ public @interface MybatisTL {
 
     Class type();
     Class collection();
+    Class tagetClass();
 
 }

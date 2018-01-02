@@ -19,6 +19,6 @@ public class MybatisApplication implements InitializingBean {
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		AnnotationUtil.limit(MybatisTL.class);
+//		AnnotationUtil.limit(MybatisTL.class);
 	}
 }

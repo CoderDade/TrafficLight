@@ -1,8 +1,10 @@
 package com.dade.trafficlight.mybatis.util;
 
+import com.dade.trafficlight.mybatis.annotation.MybatisTL;
 import com.google.common.collect.Lists;
 import org.apache.ibatis.annotations.Select;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -15,6 +17,8 @@ public class AnnotationUtil {
 
     public static void limit(Class clazz) throws NoSuchFieldException, IllegalAccessException {
 
+//        MybatisTL mybatisTL = (MybatisTL)clazz.getAnnotation(MybatisTL.class);
+//        Class target = mybatisTL.tagetClass();
         Method[] declaredMethods = clazz.getMethods();
         for (Method method : declaredMethods) {
             if (method.isAnnotationPresent(Select.class)) {
@@ -34,6 +38,7 @@ public class AnnotationUtil {
                 }
                 String[] newValue = new String[]{limitsql};
                 memberValues.put("value", newValue);
+                System.out.println(limitsql);
             }
         }
 

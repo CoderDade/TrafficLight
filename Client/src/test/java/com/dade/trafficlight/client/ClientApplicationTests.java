@@ -27,6 +27,7 @@ public class ClientApplicationTests {
 	public void testRun() throws NoSuchFieldException, IllegalAccessException {
 		List<TLUserEntity> tlUsers = tlUserDao.queryTLUser();
 		tlUsers.forEach(System.out::println);
+
 	}
 
 

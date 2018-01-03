@@ -25,7 +25,7 @@ public class ClientApplicationTests {
 
 	@Test
 	public void testRun() throws NoSuchFieldException, IllegalAccessException {
-        AnnotationUtil.limit(TLUserDao.class);
+
 		List<TLUserEntity> tlUsers = tlUserDao.queryTLUser();
 		tlUsers.forEach(System.out::println);
 	}

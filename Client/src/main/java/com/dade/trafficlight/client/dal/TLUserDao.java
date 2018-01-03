@@ -1,8 +1,10 @@
 package com.dade.trafficlight.client.dal;
 
 import com.dade.trafficlight.mybatis.annotation.MybatisTL;
+import com.dade.trafficlight.mybatis.util.AnnotationUtil;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.beans.factory.InitializingBean;
 
 import java.util.List;
 
